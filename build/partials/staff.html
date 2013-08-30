@@ -1,0 +1,18 @@
+<section id="staff" class="shows-section">
+	<header>
+		<h1>Radio DePaul Staff</h1>		
+		<input ng-model="staffSearchText" class="search " ng-change="filter()" />
+		<image class="search-icon-staff" src="/img/search.png">
+	</header>
+	<ul>
+		<a class="big" href="/#/people/{{person.id}}">
+		  <li ng-repeat="person in filteredItems = (staff | filter:staffSearchFilter) | startFrom:currentPage*pageSize |	limitTo:pageSize" class="staff-list">
+				<div class="smallBar">
+					<img ng-src="{{person.photo_thumb}}" width="50" height="50" />
+					<span class="staff-name-list"><span>{{person.name}}</span><span ng-show="person.shows"> of {{person.shows}}</span></span>
+				</div></a>
+		</li>
+	</ul>
+	<pagination page-size="10" count="filteredItems.length"></pagination>
+</div>
+</section>

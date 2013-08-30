@@ -1,0 +1,19 @@
+<section class="shows-section">
+	<header>
+		<h1>Active Shows</h1>
+		<input ng-model="showSearchText" class="search" />
+		<image class="search-icon" src="/img/search.png">
+	</header>
+		<ul class="segmented dashed">
+			<li ng-repeat="show in filteredItems = (shows | filter:showSearchFilter) | startFrom:currentPage*pageSize | limitTo:pageSize">
+				<a href="/#/shows/{{show.id}}">
+					<div class="small-bar">
+						<img ng-src="{{show.photo_thumb}}" />
+						<span class="show-name">{{show.title}}</span>
+						<span class="show-hosts" ng-show="show.hosts" ><span class="no-bold">with</span> <span ng-repeat="host in show.hosts">{{{true: ', ', false: ' '}[!$first && !$last]}}{{{true: 'and ', false: ' '}[$last && !$first]}}{{host.name}}</span></span>
+					</div>
+				</a>		
+			</li>
+		</ul>
+  <pagination page-size="10" count="filteredItems.length"></pagination>
+</section>

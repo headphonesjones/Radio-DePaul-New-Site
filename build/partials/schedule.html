@@ -1,0 +1,28 @@
+<section id="schedule">
+	<header>
+		<h1>Current Schedule</h1>
+		<ul>
+			<li ng-repeat="day in days" ng-class="{selected: $parent.selected == day}" ng-click="$parent.selected = day">{{day|truncate:3:""}}</li>
+		</ul>
+	</header>
+	<div class="content">
+		<h1 class="headline">{{selected}}</h1>
+		<ul id="schedule-list">
+			<li ng-hide="filteredShows.length"><p class="show-name">No shows today</p></li>
+			<li ng-repeat="show in filteredShows = (schedule | filter: {days:selected})">
+				<h3 class="show-name">
+					<a href="/#/shows/{{show.show.id}}" class="highlight-color">{{show.show.title}}</a>
+					<span ng-show="show.show.genres"> | {{show.show.genres}}</span>
+				</h3>
+				<a href="/#show/{{show.show.id}}"><img ng-src="{{show.show.photo_small}}" /></a>
+				<div id="time-holder">
+					<div class="schedule-time">{{show.start_time}}</div>
+					<div class="schedule-time">{{show.end_time}}</div>
+				</div>
+				
+				<p class="show-djs">with <span ng-repeat="host in show.show.hosts">{{{true: ', ', false: ' '}[!$first && !$last]}}{{{true: 'and ', false: ' '}[$last && !$first]}}<a href="/#/people/{{host.id}}" class="highlight-color">{{host.name}}</a></span></p>
+				<p class="show-bio">{{show.show.short_description}}</p>
+			</li>
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Radio DePaul</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta content='en' http-equiv='Content-Language'>
+    <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+    <link href='/apple-touch-icon.png' rel='apple-touch-icon'>
+    <link href='/apple-touch-icon.png' rel='apple-touch-icon-precomposed'>
+    <link href="/sass/mobile.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body onload='pageLoaded()'>
+    <header>Radio DePaul</header>
+    <nav>
+      <ul id='navList'>
+        <li class='selected' id='liHome' onclick='navSelected()'></li>
+        <li id='liListen' onclick='goToStreamHigh()'></li>
+        <li id='liWatch' onclick='navSelected()'></li>
+        <!-- <li id='liSchedule' onclick='navSelected()'></li> -->
+        <!-- <li id='liContact' onclick='navSelected()'></li> -->
+      </ul>
+    </nav>
+    <section id='home'>
+      <h1>Chicago's College Connection</h1>
+      <div id='logo' onclick='goToStreamHigh()'>
+        <img alt='' src='https://s3.amazonaws.com/radiodepaul/img/logo.png'>
+        <p>Click the logo to listen!</p>
+      </div>
+    </section>
+    <section id='listen'>
+      <h1>Listen Live!</h1>
+      <ul>
+        <li onclick='goToStreamHigh()'>
+          <p>High Quality Stream</p>
+          <img alt='' src='shared/images/up_arrow.jpg'>
+        </li>
+      </ul>
+    </section>
+    <section id='watch'>
+      <h1>Webcam</h1>
+      <div id='webcam_embed'></div>
+    </section>
+    <section id='schedule'>
+      <div id='schedule_list'>
+        <div id='monday'>
+          <h1>Monday</h1>
+          <ul></ul>
+        </div>
+        <div id='tuesday'>
+          <h1>Tuesday</h1>
+          <ul></ul>
+        </div>
+        <div id='wednesday'>
+          <h1>Wednesday</h1>
+          <ul></ul>
+        </div>
+        <div id='thursday'>
+          <h1>Thursday</h1>
+          <ul></ul>
+        </div>
+        <div id='friday'>
+          <h1>Friday</h1>
+          <ul></ul>
+        </div>
+        <div id='saturday'>
+          <h1>Saturday</h1>
+          <ul></ul>
+        </div>
+        <div id='sunday'>
+          <h1>Sunday</h1>
+          <ul></ul>
+        </div>
+      </div>
+    </section>
+    <section id='contact'>
+      <h1>Contact</h1>
+      <ul></ul>
+    </section>
+    <footer>
+      <a href='/?s=full'>Switch to Full Site</a>
+    </footer>
+    <script src="http://use.typekit.com/kng1gpc.js" type="text/javascript"></script>
+    <script src="/js/mobile.js?1377826440" type="text/javascript"></script>
+    <script>
+      try{Typekit.load();}catch(e){}
+    </script>
+  </body>
+</html>

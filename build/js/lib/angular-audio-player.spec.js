@@ -1,0 +1,1 @@
+describe("Directive: audio-player",function(){var e,t;beforeEach(module("angular-audio-player")),beforeEach(inject(["$compile","$rootScope",function(n,r){e=n,t=r}])),it("should loaded the directive inside the module",function(){expect(!0).toBe(!0)})});

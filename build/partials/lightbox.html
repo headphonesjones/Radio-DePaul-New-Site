@@ -1,0 +1,9 @@
+<div id="lightbox">
+<div ng-repeat="photo in photos" id="image-container-lightbox">
+<img class="thumbnail-image" ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_t.jpg" ng-click="setCurrentPhoto(photo)" />
+</div>
+<div id="previous-arrow"></div>
+
+<img ng-src="http://farm{{currentPhoto.farm}}.static.flickr.com/{{currentPhoto.server}}/{{currentPhoto.id}}_{{currentPhoto.secret}}_m.jpg" />
+  <div id="next-arrow"></div>
+</div>

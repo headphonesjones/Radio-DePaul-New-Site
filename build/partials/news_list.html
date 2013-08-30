@@ -1,0 +1,17 @@
+<section  cg-busy="{tracker:'news'}">
+  <header>
+    <h1><a href="/#/station_news">News Posts</a></h1>
+  </header>
+  <div class="content">
+    <ul>
+      <li ng-repeat="item in news">
+          <header class="headline">
+              <h2><a href="#/station_news/{{item.id}}">{{item.headline}}</a></h2>
+              <date>{{item.published_at}}</date>
+            </header>
+      <div class="content" ng-bind="item.snippet"></div>
+      <a class="read-more-button highlight-color" href="#/station_news/{{item.id}}">Read more ..</a>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,1 @@
+function getURLParameter(e){var t=window.location.search.substring(1),n=t.split("&");for(var r=0;r<n.length;r++){var i=n[r].split("=");if(i[0]==e)return i[1]}}var domain="http://radiodepaul.herokuapp.com",app={};
