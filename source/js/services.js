@@ -10,7 +10,7 @@ angular.module('radio.services', [])
      title: function() { return title + " | Radio DePaul"; },
      setTitle: function(newTitle) { title = newTitle }
    };
-}).factory('News', function($http, $routeParams){
+}).factory('News', ['$http', '$routeParams', function($http, $routeParams){
   return {  
     query: function(callback) {
     $http.jsonp(apiUrl + 'news_posts.js?callback=JSON_CALLBACK').
@@ -25,7 +25,7 @@ angular.module('radio.services', [])
     });
   }
 }
-}).factory('Events', function($http){
+}]).factory('Events', ['$http', function($http){
   return {
     query: function(callback) {
       $http.jsonp(apiUrl + 'events.js?callback=JSON_CALLBACK').
@@ -34,7 +34,7 @@ angular.module('radio.services', [])
       });
     } 
   }
-}).factory('Schedule', function($http){
+}]).factory('Schedule', ['$http', function($http){
   return {
     query: function(callback) {
       $http.jsonp(apiUrl + 'slots.js?callback=JSON_CALLBACK').
@@ -42,7 +42,7 @@ angular.module('radio.services', [])
             callback(data);
       });
     } 
-  }}).factory('Managers', function($http){
+  }}]).factory('Managers', ['$http', function($http){
   return {
     query: function(callback) {
       $http.jsonp(apiUrl + 'managers.js?callback=JSON_CALLBACK').
@@ -50,7 +50,7 @@ angular.module('radio.services', [])
             callback(data);
       });
     } 
-  }}).factory('Awards', function($http){
+  }}]).factory('Awards', ['$http', function($http){
   return {
     query: function(callback) {
       $http.jsonp(apiUrl + 'awards.js?callback=JSON_CALLBACK').
@@ -58,7 +58,7 @@ angular.module('radio.services', [])
             callback(data);
       });
     } 
-  }}).factory('Flickr', function($http){
+  }}]).factory('Flickr', ['$http', function($http){
   return {
     getList: function(callback) {
       $http.jsonp('http://api.flickr.com/services/rest/?method=flickr.photosets.getList&api_key=8ba7f50062d534406009b45aeb73eb90&user_id=66957222%40N07&format=json&jsoncallback=JSON_CALLBACK').
@@ -75,7 +75,7 @@ angular.module('radio.services', [])
     getInfo: function(callback) {
       
     }
-  }}).factory('Shows', function($http, $routeParams){
+  }}]).factory('Shows', ['$http', '$routeParams', function($http, $routeParams){
   return {
     get: function(callback) {
       $http.jsonp(apiUrl + 'shows/' + $routeParams['id'] +'.js?callback=JSON_CALLBACK').
@@ -95,7 +95,7 @@ angular.module('radio.services', [])
             callback(data);
       });
     } 
-  }}).factory('Staff', function($http, $routeParams){
+  }}]).factory('Staff', ['$http', '$routeParams', function($http, $routeParams){
   return {
     get: function(callback) {
     $http.jsonp(apiUrl + 'people/' + $routeParams['id'] +'.js?callback=JSON_CALLBACK').
@@ -109,5 +109,5 @@ angular.module('radio.services', [])
             callback(data);
       });
     }
-  }});
+  }}]);
 
