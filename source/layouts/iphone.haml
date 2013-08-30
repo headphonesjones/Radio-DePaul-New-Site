@@ -1,0 +1,30 @@
+!!!
+%html{lang: 'en'}
+  %head
+    %title Radio DePaul
+    %meta{content: 'text/html; charset=utf-8', 'http-equiv' => 'Content-Type'}
+    %meta{content: 'en', 'http-equiv' => 'Content-Language'}
+    %meta{content: 'width=device-width, initial-scale=1.0, user-scalable=no', name: 'viewport'}
+    %link{href: '/apple-touch-icon.png', rel: 'apple-touch-icon'}
+    %link{href: '/apple-touch-icon.png', rel: 'apple-touch-icon-precomposed'}
+    = stylesheet_link_tag 'mobile'
+  %body{onload: 'pageLoaded()'}
+    %header Radio DePaul
+
+    %nav
+      %ul#navList
+        %li#liHome.selected{onclick: 'navSelected()'}
+        %li#liListen{onclick: 'goToStreamHigh()'}
+        %li#liWatch{onclick: 'navSelected()'}
+        / <li id='liSchedule' onclick='navSelected()'></li>
+        / <li id='liContact' onclick='navSelected()'></li>
+
+    = yield
+
+    %footer
+      %a{href: '/?s=full'} Switch to Full Site
+
+    = javascript_include_tag 'http://use.typekit.com/kng1gpc.js'
+    = javascript_include_tag 'mobile'
+    :javascript
+      try{Typekit.load();}catch(e){}

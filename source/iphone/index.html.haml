@@ -1,0 +1,44 @@
+---
+layout: iphone
+---
+
+%section#home
+  %h1 Chicago's College Connection
+  #logo{onclick: 'goToStreamHigh()'}
+    %img{alt: '', src: 'https://s3.amazonaws.com/radiodepaul/img/logo.png'}/
+    %p Click the logo to listen!
+%section#listen
+  %h1 Listen Live!
+  %ul
+    %li{onclick: 'goToStreamHigh()'}
+      %p High Quality Stream
+      %img{alt: '', src: 'shared/images/up_arrow.jpg'}/
+%section#watch
+  %h1 Webcam
+  #webcam_embed
+%section#schedule
+  #schedule_list
+    #monday
+      %h1 Monday
+      %ul
+    #tuesday
+      %h1 Tuesday
+      %ul
+    #wednesday
+      %h1 Wednesday
+      %ul
+    #thursday
+      %h1 Thursday
+      %ul
+    #friday
+      %h1 Friday
+      %ul
+    #saturday
+      %h1 Saturday
+      %ul
+    #sunday
+      %h1 Sunday
+      %ul
+%section#contact
+  %h1 Contact
+  %ul

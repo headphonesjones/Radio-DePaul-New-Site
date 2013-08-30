@@ -1,0 +1,51 @@
+<section>
+  <header>
+    <h1><a href="/#/station_news" id="home-news-headline">Radio DePaul News</a></h1>
+  </header>
+  <div class="content">
+    <ul>
+      <li ng-repeat="item in news">
+          <header class="headline">
+              <h2><a href="#/station_news/{{item.id}}">{{item.headline}}</a></h2>
+              <date>{{item.published_at}}</date>
+            </header>
+      <div class="content" ng-bind="item.snippet"></div>
+      <a class="read-more-button highlight-color" href="#/station_news/{{item.id}}">Read more ..</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="events">
+  <header><h1>Coming Up</h1></header>
+  <div class="content">
+    <ul class="segmented">
+      <li ng-repeat="event in events">
+        <h2>{{event.title}}</h2>
+        <p>{{event.first_line}} - {{event.second_line}}</p>
+        <p>{{event.location}}</p>
+        <p>{{event.description}}</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <header><h1>Recent Posts</h1></header>
+  <div disqus="page" class="content"></div>
+</section>
+
+
+<div id="sponsors">
+  <br/>
+  <h2>Sponsors of Radio DePaul</h2>
+   <a href="http://www.costellosandwich.com/">
+     <div id="costello"></div>
+   </a>
+   <a href="http://www.redmangousa.com/">
+     <div id="redmango"></div>
+   </a>
+   <a href="#/about/join_radio_depaul">
+     <div id="sponsor-link"></div>
+   </a>
+</div>

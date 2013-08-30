@@ -1,0 +1,41 @@
+---
+page_title: 'Schedule'
+body_title: 'schedule'
+---
+
+- content_for(:js) do
+  = javascript_include_tag 'schedule'
+
+
+- content_for :categories do
+  %li
+    %a{:data => {:'target' => 'monday'}}
+      Mon
+  %li
+    %a{:data => {:'target' => 'tuesday'}}
+      Tue
+  %li
+    %a{:data => {:'target' => 'wednesday'}}
+      Wed
+  %li
+    %a{:data => {:'target' => 'thursday'}}
+      Thu
+  %li
+    %a{:data => {:'target' => 'friday'}}
+      Fri
+  %li
+    %a{:data => {:'target' => 'saturday'}}
+      Sat
+  %li
+    %a{:data => {:'target' => 'sunday'}}
+      Sun
+
+.container
+  #sidebar= partial 'partials/sidebar'
+  #content
+    #schedule.contentBox
+      .bar.schedulebar
+        Current Schedule
+        %ul.tabs
+          = yield_content :categories
+      =image_tag "ajax-loader.gif", :class => "loader-img"

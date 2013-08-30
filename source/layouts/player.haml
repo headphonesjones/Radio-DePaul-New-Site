@@ -1,0 +1,18 @@
+!!!5
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %title= "Radio DePaul | #{current_page.data.page_title}"
+    %meta{content: '', name: 'description'}
+    %meta{content: 'width=device-width', name: 'viewport'}
+    %meta{content: "Radio DePaul is DePaul University's award-winning student radio station. Featuring a vibrant blend of music, talk, news, and sports, Radio DePaul is Chicago's College Connection!", name: 'Description'}
+    = stylesheet_link_tag 'player'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Stardos+Stencil:400,700|Tenor+Sans&v2'
+    / [if lt IE 9]
+      <script src='//html5shiv.googlecode.com/svn/trunk/html5.js'></script>
+  %body{title: current_page.data.body_title }
+
+    = yield
+
+    = javascript_include_tag 'player'
+    = javascript_include_tag 'https://www.google.com/jsapi?callback=loadGoogleAPIs&key=ABQIAAAA-HgkQ3h85RC9grgGQsrSnhSP5c0xxhF7kkwus1Uc2hzPhLJBLxTWfP5nbXo7i4gExC2Q7K1TO0kBJg'

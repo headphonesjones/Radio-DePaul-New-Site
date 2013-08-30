@@ -1,0 +1,38 @@
+media page
+	gallery slideshow
+		http://rabidgadfly.com/2013/03/super-easy-angular-image-gallery/
+		https://github.com/paul-hammant/angular_slideshow
+		http://paulhammant.com/2013/03/06/a-better-html-slideshow-app-using-angular/
+		https://github.com/IgorMinar/ng-slides
+
+podcasts
+
+loading icon
+	https://github.com/cgross/angular-busy
+	http://stackoverflow.com/questions/17494732/how-to-make-a-loading-indicator-for-every-asynch-action-in-an-angularjs-app	
+    #GOT FILES ADDED ||  NOW TO IMPLEMENT
+
+
+rails app
+	reduce data in api/json requests - done, need to deploy
+	delete unneeded functions
+	new admin interface?
+
+filter or directive for hosts to sentence
+
+format awards
+
+
+## FINISHED WORK ##
+
+#done - Sports page
+#done - Link Sponsor Ad on home page to About page under Sponsor tab
+#done - Refractor pagination
+	       http://jsfiddle.net/eqCWL/2/ 
+#done - google analytics
+#done - audio player
+#done - tweets on person and show page -- ###needs to be styled###
+#done - page titles
+#done - disqus -- most old comments aren't showing up cause the names are different. Migrate? Or let them die?
+	trusted domains = http://radio.depaul.edu
+#done - webcam

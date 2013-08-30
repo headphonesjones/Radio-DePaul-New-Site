@@ -1,0 +1,18 @@
+#webcam-player
+
+%script{:src => "http://jwpsrv.com/library/GgcroA5wEeOwaBIxOUCPzg.js"}
+%script{:type => "text/javascript", :'jwplayer.key' => "ABCDEFGHIJKLMOPQ"}
+%script
+    jwplayer("webcam-player").setup({
+        file: "http://ec2-67-202-3-106.compute-1.amazonaws.com/rtplive/mp4:camera.stream/playlist.m3u8",
+        //type: "mp4:camera.stream",
+        //provider: "rtmp",
+        //streamer: "rtmp://ec2-67-202-3-106.compute-1.amazonaws.com/rtplive",
+        //audio: "http://rock.radio.depaul.edu:8000/stream.mp3&137714603810",
+        image: "../img/station.jpg",
+        width: "700",
+        height: "375",
+        analytics: {
+        enabled: true
+        }
+    )};

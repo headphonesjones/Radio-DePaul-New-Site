@@ -1,0 +1,20 @@
+---
+page_title: 'Show'
+body_title: 'show'
+---
+
+- content_for(:js) do
+  = javascript_include_tag 'show'
+
+.container
+  #sidebar= partial 'partials/sidebar'
+  #content
+    #show
+      %h2#name
+      .photoBox.left
+      .contentBox.host-box.right
+        .bar Hosted By
+        %ul#hostlist
+      .contentBox.genre-box.right
+        .bar Genre
+        %p

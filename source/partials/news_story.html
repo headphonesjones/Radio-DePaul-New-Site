@@ -1,0 +1,9 @@
+<section>
+	<div class="content">
+		<header class="headline">
+			<h1>{{news.headline}}</h1><date>{{news.published_at}}</date>
+			<div>{{news.author.name}}</div>
+		</header>
+		<div ng-bind-html="news.content"></div>
+	</div>
+</section>

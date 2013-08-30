@@ -1,0 +1,29 @@
+---
+page_title: 'Home'
+body_title: 'home'
+---
+
+- content_for(:js) do
+  = javascript_include_tag 'home'
+
+
+#home_image
+  #banner_img= image_tag 'station.png', :class => "home_image"
+
+.container
+  #sidebar= partial 'partials/sidebar'
+
+  #content
+    #news_widget.contentBox
+      .bar
+        %a{:href => /station_news/}Radio DePaul News
+      =image_tag "ajax-loader.gif", :class => "loader-img"
+      %ul
+    #events.contentBox
+      .bar Coming Up
+      =image_tag "ajax-loader.gif", :class => "loader-img"
+      %ul
+    #recentcomments.contentBox.clear
+      .bar Recent Posts
+      .dsq-widget
+        %script{src: 'http://radiodepaul.disqus.com/recent_comments_widget.js?num_items=3&hide_avatars=0&avatar_size=32&excerpt_length=100', type: 'text/javascript'}

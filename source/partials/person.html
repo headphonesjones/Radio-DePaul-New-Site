@@ -1,0 +1,53 @@
+<div id="person">
+	<h2 id="name">{{person.name}}</h2>
+	<div class="photoBox left">
+		<img ng-src="{{person.photo_medium}}" />
+	</div>
+
+	<section class="right host-box" ng-show="person.shows">
+		<header><h1>Shows Hosted</h1></header>
+		<ul>
+			<li ng-repeat="show in person.shows" class="shows-hosted">
+				<a href="/#/shows/{{show.id}}">
+					<img ng-src="{{show.show_photo_thumb}}" height=50 width=50 />
+					<p>{{show.title}} 
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<section class="right person-info social-box">
+		<header><h1>Info</h1></header>
+		<ul>
+			<li ng-show="person.major"><h2>Major</h2><p>{{person.major}}</li>
+			<li ng-show="person.hometown"><h2>Hometown</h2><p>{{person.hometown}}</li>
+			<li ng-show="person.class_year"><h2>Class Year</h2><p>{{person.class_year}}</li>
+		</ul>
+	</section>
+
+	<section class="right social-box" ng-show="person.twitter || person.facebook || person.email || person.linkedin">
+		<header><h1>Follow / E-mail {{person.name}}</h1></header>
+		<ul id="personshowSocial" >
+			<li ng-show="person.twitter" class="twitter"><a href="http://twitter.com/{{person.twitter}}" target="_blank"></a></li>
+			<li ng-show="person.facebook" class="facebook"><a href="http://facebook.com/{{person.facebook}}" target="_blank"></a></li>
+			<li ng-show="person.linkedin" class="linkedin"><a href="http://linkedin.com/{{person.linkedin}}" target="_blank"></a></li>
+			<li ng-show="person.email" class="email"><a href="mailto:{{person.email}}"></a></li>
+		</ul>
+	</section>
+
+	<section class="clear" ng-show="person.influences">
+		<header><h1>Influences</h1></header>
+		<p>{{person.influences}}
+	</section>
+
+	<section class="clear">
+		<header><h1>Bio</h1></header>
+		<p>{{person.bio}}
+	</section>
+
+	<section twitter="person.twitter" id="person-tweet"></section>
+	<section>
+		<header><h1>Recent Posts</h1></header>
+		<div disqus="person.name" class="content"></div>
+	</section>
+</div>

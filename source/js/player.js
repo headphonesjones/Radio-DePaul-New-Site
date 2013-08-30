@@ -1,0 +1,2 @@
+//= require jwplayer
+//= require main

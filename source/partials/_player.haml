@@ -1,0 +1,43 @@
+#now_playing_light
+  %p On Air
+#now_playing{"ng-controller" => 'OnAirController'}
+  #image-title-container
+    %img{ 'ng-src' => '{{show.photo_thumb}}', :class => "player-show-image" }
+    #on-air-show-text
+      #showtitle
+        %h2
+          %a{ :href => '/#/shows/{{show.id}}'} {{show.title}}
+        %h3
+          %span#host-text Host(s): 
+          %span{'ng-repeat' => 'host in show.hosts', :id => "on-air-host-list"}
+            %a{ :href => '/#/person/{{host.id}}', :id => "playing-host-names"}
+              {{host.name}}
+        %span#playing-genres {{show.genres}}
+
+  //%audio{"data-player-control" => "audio1", "data-playlist"=> "playlist1", :id => "audio-player", "audio-player" => true, "controls" => true}
+  /%source{ :src => 'http://rock.radio.depaul.edu:8000/stream/1/', "type" => "audio/mpeg"}
+  #play-pause-buttons
+    %a{:class => "button button-circle button-primary", :id => "play-button", "ng-click" => 'playMusic()', "ng-hide" => "playing"} 
+      %span#play-icon &#9658;
+    %a{:class => "button button-circle button-caution", :id => "pause-button", "ng-click" => 'pauseMusic()', "ng-show" => "playing", "ng-cloak" => true}
+      %span#stop-icon I I
+
+
+#chatroom-holder{"ng-controller" => 'ChatController'}
+  %section#chatroom{"ng-show" => "showChat"}
+    %header{"ng-click" => "toggleChat()" }
+      %h1 Chat With Us Live!
+      %img{:src => "../img/minimize.png", :id => "minimize-icon"}
+    %iframe{:width => 250, :height => 300, "ng-src" => "{{trustSrc(chatURL)}}"}
+  #button-holder
+    #webcam-streamfile-box
+      %a{ :id => "webcam-button", :href => "/#/webcam" , :class => "button button-rounded button-flat-primary button-tiny"} Watch the Webcam
+      %a{ :href => "http://rock.radio.depaul.edu:8000/listen.pls?sid=1",:id => "streamfile-button",:class => "button button-rounded button-flat-primary button-tiny"} Download the Streamfile
+    #chat-player-box
+      %a{"ng-click" => "toggleChat()", :id => "chat-button", :class => "button button-rounded button-flat-primary button-tiny"}Chat with our DJs
+      %a{:id => "player-button", :class => "button button-rounded button-flat-primary button-tiny", :onClick => "window.open('../popupplayer/popupplayer.html','toolbar=no, menubar=no, location=no, status=no, titlebar=no','width=390,height=100');"}Pop-up Player
+
+#hidden-player
+  #player-holder
+    /%script#flash-player{:src => "http://player.wavepanel.net/embed/basic/64c829446c484becd92959d9b08a8fab7c2f9c67"}
+    
