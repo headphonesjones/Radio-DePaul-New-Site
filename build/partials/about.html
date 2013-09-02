@@ -73,15 +73,15 @@
 
 <section id="awards" ng-show="tabs.active=='Awards and Recognition'">
   <header><h1>Awards & Recognition</h1></header>
-  <!-- <div class="content">
+  <div class="content">
     <ul class="segmented">
       <li ng-repeat="award in awards">
-        <h2>{{award.title}}</h2>
-        <p>{{award.first_line}} - {{award.second_line}}</p>
+        <h2>{{award.name}}</h2>
+        <p>{{award.for}}</p>
         <p>{{award.year}}</p>
-        <p>{{award.description}}</p>
+        <p>{{award.award_organization.name}}</p>
+        <p>{{award.award_organization.url}}</p>
       </li>
     </ul>
-  </div>-->
-  {{awards}}
+  </div>
 </section>

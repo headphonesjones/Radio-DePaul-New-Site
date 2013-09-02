@@ -96,7 +96,8 @@ controllers.controller('OnAirController', ['$scope', '$rootScope', 'Shows', func
 				  url: 'http://rock.radio.depaul.edu:8000/stream.mp3&137714603810',
 				  autoLoad: true,
 				  autoPlay: true,
-				  volume: 100
+				  volume: 75,
+				  useHTML5Audio: true,
 				});
 			}
 		});

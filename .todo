@@ -14,14 +14,20 @@ loading icon
 
 
 rails app
-	reduce data in api/json requests - done, need to deploy
 	delete unneeded functions
 	new admin interface?
 
 filter or directive for hosts to sentence
 
-format awards
+MAKE MOBILE FRIENDLY STREAM AND WEBCAM
 
+NEW BANNER IMAGE
+
+TWITTER FEED ON SHOW PAGES EMPTY (MAYBE DELETE TWITTER ON SHOW PAGES?)
+
+DISPLAY NO TWITTER FEED BOX IF THERE IS NO TWITTER ACCOUNT FHAT TIONTIRSON
+
+LOOK INTO IHEARTRADIO API
 
 ## FINISHED WORK ##
 
@@ -36,3 +42,6 @@ format awards
 #done - disqus -- most old comments aren't showing up cause the names are different. Migrate? Or let them die?
 	trusted domains = http://radio.depaul.edu
 #done - webcam
+#done - STAFF DONT HAVE NAMES ABOVE THEM IN ABOUT SECTION
+#done - format awards
+#done - reduce data in api/json requests - done, need to deploy

@@ -14,8 +14,6 @@
               {{host.name}}
         %span#playing-genres {{show.genres}}
 
-  //%audio{"data-player-control" => "audio1", "data-playlist"=> "playlist1", :id => "audio-player", "audio-player" => true, "controls" => true}
-  /%source{ :src => 'http://rock.radio.depaul.edu:8000/stream/1/', "type" => "audio/mpeg"}
   #play-pause-buttons
     %a{:class => "button button-circle button-primary", :id => "play-button", "ng-click" => 'playMusic()', "ng-hide" => "playing"} 
       %span#play-icon &#9658;
